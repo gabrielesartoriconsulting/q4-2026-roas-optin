@@ -9,8 +9,8 @@ Basta aprire i file o caricarli su un qualsiasi hosting statico.
 index.html        opt-in
 grazie.html       thank-you
 css/style.css     tutto lo stile
-js/config.js      <-- unico file da toccare per webhook, evento, video, redirect
-js/main.js        logica (tracking, form, modal, video, countdown)
+js/config.js      <-- unico file da toccare per webhook, evento, redirect
+js/main.js        logica (tracking, form, modal, countdown)
 js/countries.js   prefissi internazionali (dati statici)
 assets/           immagini e favicon
 ```
@@ -33,14 +33,6 @@ Attualmente è attivo **TEST**. Per andare live basta cambiare `ACTIVE_ENV` in `
 ## Cambiare il redirect della thank-you
 
 `js/config.js` → `THANK_YOU_URL` (ora `./grazie.html`).
-
-## Cambiare il video Vidalytics
-
-`js/config.js` → blocco `VIDALYTICS`: `EMBED_ID`, `SRC_BASE`, `POSTER`.
-Il markup in `index.html` è solo il contenitore `.vsl-wrapper[data-video]` con la cover:
-non contiene codice del player. `ENABLED: false` lascia la sola immagine.
-
-**Attenzione:** l'embed configurato è ancora quello della VSL Q2, tenuto come segnaposto.
 
 ## Cambiare il copy
 
@@ -103,8 +95,9 @@ per tutta la permanenza sulla pagina.
 
 ## Countdown
 
-Disattivato (`COUNTDOWN.ENABLED = false`) perché la data Q4 non è ancora nota.
-Per attivarlo: imposta `TARGET_ISO`, metti `ENABLED: true` e aggiungi in pagina
+Disattivato (`COUNTDOWN.ENABLED = false`). `TARGET_ISO` punta già alla Serata 1:
+Lunedì 12 Ottobre 2026 ore 20:30 (Europe/Rome) → `2026-10-12T20:30:00+02:00`.
+Per attivarlo: metti `ENABLED: true` e aggiungi in pagina
 
 ```html
 <div class="countdown-section" data-countdown>

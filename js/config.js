@@ -1,7 +1,7 @@
 /* ==========================================================================
    Q4 2026 ROAS — OPT-IN
    config.js — unico punto di configurazione della pagina.
-   Non serve toccare main.js per cambiare webhook, evento, video o redirect.
+   Non serve toccare main.js per cambiare webhook, evento o redirect.
    ========================================================================== */
 
 (function (window) {
@@ -28,38 +28,20 @@
   var THANK_YOU_URL = './grazie.html';
 
   /* ------------------------------------------------------------------------
-     3) Vidalytics — zona video isolata.
-     Per sostituire il video Q4: cambia EMBED_ID / ACCOUNT_ID / SRC_BASE con
-     quelli forniti da Vidalytics. Metti ENABLED:false per lasciare la sola
-     cover statica (POSTER) senza caricare nulla da rete.
-     ATTENZIONE: i valori qui sotto sono ancora quelli del vecchio video Q2,
-     tenuti solo come segnaposto finché non arriva il video definitivo Q4.
-     ------------------------------------------------------------------------ */
-
-  var VIDALYTICS = {
-    ENABLED: true,
-    EMBED_ID: 'vidalytics_embed_l32oZ0q5alt4ptyZ',
-    SRC_BASE: 'https://fast.vidalytics.com/embeds/mfTzAkpp/l32oZ0q5alt4ptyZ/',
-    POSTER: './assets/vsl-cover.png',
-    // Il player parte solo al primo click sulla cover: zero richieste di rete
-    // al load. Metti false per caricare l'embed subito.
-    CLICK_TO_LOAD: true
-  };
-
-  /* ------------------------------------------------------------------------
-     4) Countdown (opzionale)
+     3) Countdown (opzionale)
      Si attiva solo se in pagina esiste un elemento [data-countdown].
-     Attualmente NON è presente in index.html: la data è un placeholder Q2 e
-     va aggiornata insieme al nuovo copy Q4.
+     Attualmente NON è presente in index.html.
+     Data evento: Serata 1 — Lunedì 12 Ottobre 2026, ore 20:30 (Europe/Rome).
+     +02:00 = ora legale italiana (CEST), in vigore fino al 25 ottobre 2026.
      ------------------------------------------------------------------------ */
 
   var COUNTDOWN = {
     ENABLED: false,
-    TARGET_ISO: '2026-04-13T21:00:00+02:00' // PLACEHOLDER — data vecchio Q2
+    TARGET_ISO: '2026-10-12T20:30:00+02:00' // Lunedì 12 Ottobre 2026, 20:30 Europe/Rome
   };
 
   /* ------------------------------------------------------------------------
-     5) Form / telefono
+     4) Form / telefono
      ------------------------------------------------------------------------ */
 
   var FORM = {
@@ -80,7 +62,7 @@
   };
 
   /* ------------------------------------------------------------------------
-     6) Parametri di tracking raccolti all'apertura della pagina
+     5) Parametri di tracking raccolti all'apertura della pagina
      ------------------------------------------------------------------------ */
 
   var TRACKING_PARAMS = [
@@ -103,7 +85,6 @@
     EVENT_NAME: EVENT_NAME,
     PAGE_NAME: PAGE_NAME,
     THANK_YOU_URL: THANK_YOU_URL,
-    VIDALYTICS: VIDALYTICS,
     COUNTDOWN: COUNTDOWN,
     FORM: FORM,
     TRACKING_PARAMS: TRACKING_PARAMS,

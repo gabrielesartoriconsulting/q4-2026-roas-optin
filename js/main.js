@@ -8,7 +8,6 @@
      Phone     — selettore prefisso internazionale senza dipendenze
      Forms     — un solo handler condiviso per tutti i form (hero, popup, ...)
      Modal     — apertura/chiusura del popup d'iscrizione
-     Vidalytics— caricamento isolato e sostituibile del player
      Countdown — opzionale, si attiva solo se presente in pagina
    ========================================================================== */
 
@@ -502,79 +501,6 @@
   })();
 
   /* ======================================================================
-     Vidalytics — isolato e sostituibile.
-     Per cambiare video basta aggiornare CONFIG.VIDALYTICS in js/config.js.
-     ====================================================================== */
-
-  var Video = (function () {
-    var loaded = false;
-
-    function loadEmbed(container) {
-      if (loaded) return;
-      loaded = true;
-
-      var cfg = CFG.VIDALYTICS;
-      var mount = document.createElement('div');
-      mount.id = cfg.EMBED_ID;
-      mount.dir = 'ltr';
-      mount.style.position = 'relative';
-      mount.style.width = '100%';
-      mount.style.paddingTop = '56.25%';
-      container.innerHTML = '';
-      container.appendChild(mount);
-
-      // Loader ufficiale Vidalytics, riscritto in forma leggibile.
-      var script = document.createElement('script');
-      script.async = true;
-      script.src = cfg.SRC_BASE + 'loader.min.js';
-      script.onload = function () {
-        try {
-          var Loader = window.VidalyticsL && window.VidalyticsL.Loader;
-          if (!Loader) return;
-          new Loader().loadScript(cfg.SRC_BASE + 'player.min.js', function () {
-            var Embed = window.Vidalytics && window.Vidalytics.Embed;
-            if (Embed) new Embed().run(cfg.EMBED_ID);
-          });
-        } catch (e) {
-          if (window.console && window.console.warn) {
-            window.console.warn('[optin] player video non disponibile:', e.message);
-          }
-        }
-      };
-      script.onerror = function () {
-        if (window.console && window.console.warn) {
-          window.console.warn('[optin] loader video non raggiungibile');
-        }
-      };
-      document.head.appendChild(script);
-    }
-
-    function init() {
-      var container = $('[data-video]');
-      if (!container) return;
-
-      var cfg = CFG.VIDALYTICS;
-      if (!cfg.ENABLED) return;
-
-      if (!cfg.CLICK_TO_LOAD) {
-        loadEmbed(container);
-        return;
-      }
-
-      var trigger = $('[data-video-play]', container);
-      if (!trigger) {
-        loadEmbed(container);
-        return;
-      }
-      trigger.addEventListener('click', function () {
-        loadEmbed(container);
-      });
-    }
-
-    return { init: init };
-  })();
-
-  /* ======================================================================
      Countdown — opzionale: nessun errore se il markup non esiste.
      ====================================================================== */
 
@@ -622,7 +548,6 @@
     Tracking.init();
     Forms.init();
     Modal.init();
-    Video.init();
     Countdown.init();
   }
 
