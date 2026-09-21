@@ -12,7 +12,7 @@
      Per passare da TEST a PRODUCTION cambia SOLO la riga ACTIVE_ENV qui sotto.
      ------------------------------------------------------------------------ */
 
-  var ACTIVE_ENV = 'TEST'; // <<< 'TEST' oppure 'PRODUCTION'
+  var ACTIVE_ENV = 'PRODUCTION'; // <<< 'TEST' oppure 'PRODUCTION'
 
   var WEBHOOK_ENDPOINTS = {
     TEST: 'https://n8n.srv1681240.hstgr.cloud/webhook-test/907a4800-3caa-417e-9802-e459b1477cb4',

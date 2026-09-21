@@ -28,7 +28,7 @@ var WEBHOOK_ENDPOINTS = {
 };
 ```
 
-Attualmente è attivo **TEST**. Per andare live basta cambiare `ACTIVE_ENV` in `'PRODUCTION'`.
+Attualmente è attivo **PRODUCTION**. Per tornare in test basta cambiare `ACTIVE_ENV` in `'TEST'`.
 
 ## Cambiare il redirect della thank-you
 
