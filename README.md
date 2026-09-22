@@ -36,11 +36,35 @@ Attualmente è attivo **PRODUCTION**. Per tornare in test basta cambiare `ACTIVE
 
 ## Cambiare il copy
 
-Tutti i testi stanno in `index.html` / `grazie.html`, marcati con
-`<!-- COPY PLACEHOLDER Q2 -->` (opt-in) e `PLACEHOLDER` (thank-you).
-Sono ancora i testi del vecchio lancio Q2: date, numeri e promesse vanno riscritti.
+Tutti i testi stanno in `index.html` / `grazie.html`.
+Fonte ufficiale del copy: `OPT-IN - Lancio ROAS (12_10_2026).docx`
+(A1 = opt-in, A3 = thank-you). A2 e il blocco `--- VSL ---` di A3 sono gli
+script dei video: non vanno mostrati in pagina.
 
 `EVENT_NAME` e `PAGE_NAME` (che finiscono nel payload n8n) stanno in `js/config.js`.
+
+## Da completare (TODO nel codice)
+
+| Cosa | Dove |
+|---|---|
+| Embed Vidalytics VSL opt-in Q4 | `index.html` → `TODO: NEW Q4 OPT-IN VIDALYTICS EMBED` |
+| Embed Vidalytics VSL thank-you Q4 | `grazie.html` → `TODO: NEW Q4 THANK-YOU VIDALYTICS EMBED` |
+| URL Community WhatsApp | `grazie.html` → `TODO: URL COMMUNITY WHATSAPP` |
+| URL Google Calendar | `grazie.html` → `TODO: URL GOOGLE CALENDAR` |
+
+Per le VSL: sostituire il `<div class="vsl-placeholder">` dentro `.vsl-frame`
+con il codice embed. Per i due pulsanti: aggiungere `href` e rimuovere `aria-disabled`.
+
+## VSL OPT-IN — NOTE DAL COPY
+
+Nel DOCX originale, sezione A2 (script VSL opt-in), sono presenti 2 commenti
+editoriali agganciati alla frase "Ma adesso arriva la buona notizia.":
+
+- "aggiungi: la notizia che può cambiare per sempre…"
+- "Si, perchè io ed il mio team abbiamo deciso di farti un regalo unico…"
+
+Queste note NON appartengono al copy HTML dell'opt-in e non vanno inserite
+nella landing. Devono essere considerate quando verrà prodotta/montata la nuova VSL.
 
 ## Form e payload
 

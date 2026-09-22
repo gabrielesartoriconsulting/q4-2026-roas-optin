@@ -6,11 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- ============================================================
-       COPY PLACEHOLDER — la thank-you Q4 non è ancora definita.
-       ============================================================ -->
-  <title>Q4 2026 ROAS — Iscrizione confermata</title>
-  <meta name="description" content="PLACEHOLDER — descrizione da sostituire con il copy Q4 ROAS.">
+  <!-- Copy: "OPT-IN - Lancio ROAS (12_10_2026).docx" → sezione A3 - TY PAGE -->
+  <title>I prossimi passi — Evento Live 12 Ottobre 2026</title>
 
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
 
@@ -25,80 +22,98 @@
 <body>
 
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
-    <symbol id="icon-check" viewBox="0 0 512 512">
-      <path
-        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm123 145L240 292c-5 5-12 5-17 0l-73-73c-5-5-5-12 0-17l17-17c5-5 12-5 17 0l48 48 114-114c5-5 12-5 17 0l17 17c4 4 4 12-1 17z" />
+    <symbol id="icon-play" viewBox="0 0 384 512">
+      <path d="M73 39c-15-9-33-9-48 0S0 63 0 80v352c0 17 9 33 25 41s33 9 48 0l288-176c14-9 23-24 23-41s-9-32-23-41L73 39z" />
     </symbol>
   </svg>
 
   <!-- ============================================================
-       TOP BAR — COPY PLACEHOLDER
+       ATTENZIONE — headline iniziale
        ============================================================ -->
-  <div class="top-bar">
-    <strong>ISCRIZIONE CONFERMATA</strong>
+  <div class="alert-bar" role="alert">
+    <strong>ATTENZIONE:</strong> Non chiudere questa pagina perché il tuo posto non è ancora riservato
   </div>
 
   <div class="container">
 
-    <!-- ==========================================================
-         INTESTAZIONE — COPY PLACEHOLDER
-         ========================================================== -->
     <section class="thankyou">
-      <span class="thankyou__badge">
-        <svg aria-hidden="true">
-          <use href="#icon-check"></use>
-        </svg>
-      </span>
-
-      <div class="big-headline">SEI DENTRO!</div>
-      <p class="sub-headline">LA TUA ISCRIZIONE È CONFERMATA</p>
-
       <p class="thankyou__lead">
-        PLACEHOLDER — qui andrà il copy definitivo della thank-you Q4 ROAS.
+        Segui i passaggi indicati su questa pagina o la tua iscrizione potrebbe essere
+        <strong class="text-alert">CANCELLATA</strong>…
       </p>
     </section>
 
     <!-- ==========================================================
-         PROSSIMI PASSI — COPY PLACEHOLDER
+         PASSO 1 — VSL thank-you
+         Il testo del video (A3, da "--- VSL ---" a "--- FINE VSL ---")
+         è lo script del video: NON va mostrato in pagina.
+
+         TODO: NEW Q4 THANK-YOU VIDALYTICS EMBED
+         Sostituire l'intero <div class="vsl-placeholder"> qui sotto con
+         l'embed Vidalytics Q4 definitivo. NON riutilizzare l'embed Q2.
          ========================================================== -->
+    <section class="thankyou-vsl">
+      <h2 class="step-heading"><span>PASSO 1:</span> Guarda interamente il video qui in basso:</h2>
+
+      <div class="vsl-frame" data-vsl="thankyou">
+        <div class="vsl-placeholder" role="img" aria-label="Video">
+          <svg aria-hidden="true">
+            <use href="#icon-play"></use>
+          </svg>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="thankyou-steps">
+
+        <!-- Step 2 — Community WhatsApp -->
         <div class="thankyou-step">
-          <span class="thankyou-step__number">Passo 1</span>
-          <h3>Controlla la tua email</h3>
-          <p>PLACEHOLDER — testo da sostituire con il copy definitivo Q4.</p>
+          <span class="thankyou-step__number">Step 2</span>
+          <h3>Entra nella Community WhatsApp Riservata</h3>
+          <p>È semplice: premi il bottone qui sotto ed entri nella community. È lì che ti arrivano il link della
+            diretta, i promemoria e i primi passi da muovere prima dell'evento. E dentro trovi esempi reali e
+            testimonianze di chi ha già partecipato ai nostri eventi.</p>
+
+          <!-- TODO: URL COMMUNITY WHATSAPP
+               Il link definitivo non è ancora stato fornito.
+               Aggiungere href="https://chat.whatsapp.com/..." e rimuovere aria-disabled. -->
+          <a class="cta-button cta-button--step" aria-disabled="true" target="_blank" rel="noopener">
+            ACCEDI ALLA COMMUNITY WHATSAPP
+          </a>
         </div>
+
+        <!-- Step 3 — Email -->
         <div class="thankyou-step">
-          <span class="thankyou-step__number">Passo 2</span>
-          <h3>Salva la data</h3>
-          <p>Lunedì 12 Ottobre alle 20:30.</p>
+          <span class="thankyou-step__number">Step 3</span>
+          <h3>Adesso controlla la tua casella di posta elettronica (la tua mail):</h3>
+          <p>Ti abbiamo inviato una mail in cui troverai tutte le informazioni per partecipare all'evento. L'e-mail
+            potrebbe finire in <strong>Spam</strong>, in <strong>Promozioni</strong>. Quindi controlla anche lì e, in
+            caso, spostala nella casella principale così da non perderla.</p>
         </div>
+
+        <!-- Step 4 — Evento -->
         <div class="thankyou-step">
-          <span class="thankyou-step__number">Passo 3</span>
-          <h3>Collegati alla diretta</h3>
-          <p>PLACEHOLDER — testo da sostituire con il copy definitivo Q4.</p>
+          <span class="thankyou-step__number">Step 4</span>
+          <h3>Presentati all'evento:</h3>
+          <p>L'appuntamento è <strong>Lunedì 12 Ottobre alle 20:30 in punto</strong> (segnatelo). Tranquillo, riceverai
+            il link per entrare nella diretta tramite e-mail, SMS e WhatsApp!</p>
+
+          <!-- TODO: URL GOOGLE CALENDAR
+               Il link definitivo non è ancora stato fornito.
+               Aggiungere href="https://calendar.google.com/..." e rimuovere aria-disabled. -->
+          <a class="form-submit form-submit--step" aria-disabled="true" target="_blank" rel="noopener">
+            🗓️ AGGIUNGI LE DATE AL TUO GOOGLE CALENDAR!
+          </a>
         </div>
+
       </div>
     </section>
-
-    <!-- ==========================================================
-         CTA FINALE — opzionale.
-         Per attivarla: togli hidden e imposta href/testo definitivi.
-         ========================================================== -->
-    <section hidden>
-      <div class="cta-wrapper">
-        <a href="#" class="cta-button">
-          CTA PLACEHOLDER<small>Testo secondario placeholder</small>
-        </a>
-      </div>
-    </section>
-
-    <div class="divider"></div>
 
   </div>
 
   <!-- ============================================================
-       FOOTER — COPY PLACEHOLDER
+       FOOTER
        ============================================================ -->
   <div class="footer">
     © 2026 Sartori Academy. Tutti i diritti riservati.

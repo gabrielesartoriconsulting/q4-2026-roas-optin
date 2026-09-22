@@ -6,12 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- ============================================================
-       COPY PLACEHOLDER — title/description sono ancora quelli Q2.
-       Da sostituire quando arriva il copy Q4 ROAS.
-       ============================================================ -->
-  <title>Q4 2026 ROAS — Opt-In</title>
-  <meta name="description" content="PLACEHOLDER — descrizione da sostituire con il copy Q4 ROAS.">
+  <!-- Copy: "OPT-IN - Lancio ROAS (12_10_2026).docx" → sezione A1 - OPT-IN PAGE -->
+  <title>Evento Live Gratuito — Lunedì 12 Ottobre 2026</title>
+  <meta name="description"
+    content="Evento Live Gratuito di Lunedì 12 Ottobre 2026 ore 20:30: scopri come ricevere un Prodotto Vincente con negozio online annesso, già pronto a vendere. Riservato solo ai nostri studenti.">
 
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
 
@@ -45,42 +43,76 @@
       <path
         d="M164 24c-8-18-28-28-47-23L28 25C10 30-2 46 0 65c13 234 199 420 433 433 19 2 35-10 40-28l24-89c5-19-5-39-23-47l-96-41c-16-7-34-2-45 11l-40 49a370 370 0 0 1-155-155l49-40c13-11 18-29 11-45l-34-89z" />
     </symbol>
+    <symbol id="icon-play" viewBox="0 0 384 512">
+      <path d="M73 39c-15-9-33-9-48 0S0 63 0 80v352c0 17 9 33 25 41s33 9 48 0l288-176c14-9 23-24 23-41s-9-32-23-41L73 39z" />
+    </symbol>
   </svg>
 
   <!-- ============================================================
-       TOP BAR — COPY PLACEHOLDER Q2
+       TOP BAR
        ============================================================ -->
   <div class="top-bar">
-    <strong>EVENTO GRATUITO:</strong> Lunedì 12 Ottobre ore 20:30
+    <strong>EVENTO LIVE GRATUITO:</strong> Lunedì 12 ottobre 2026 ore 20:30
   </div>
 
   <div class="container">
 
     <!-- ==========================================================
-         HERO — COPY PLACEHOLDER Q2 (headline, sottotitolo, claim)
+         HERO
          ========================================================== -->
     <section class="hero">
-      <p class="flash-label"><span class="emoji">🚨</span> NOTIZIA FLASH: A fine Aprile avremo circa</p>
+      <p class="pre-headline">Sei un nostro studente?</p>
+
+      <p class="flash-label"><span class="emoji">🚨</span> NOTIZIA FLASH: A fine Ottobre avremo circa</p>
 
       <div class="big-headline hero-headline-forced"><span>50 PRODOTTI</span><br><span>VINCENTI</span></div>
 
       <p class="sub-headline hero-subheadline-forced">
-        <span>Da potenzialmente</span><br><span>10-15-20 MILA EURO</span>
+        <span>DA POTENZIALMENTE</span><br><span>5-10-20 MILA EURO</span>
       </p>
 
       <p class="description">
-        Ne terremo alcuni per avviare i nostri brand, i restanti
-        <span class="highlight">li regaleremo</span> ai nostri studenti.
+        È GIÀ SUCCESSO UNA VOLTA, MESI FA... E CHI C'ERA OGGI GUADAGNA. ADESSO STA PER RISUCCEDERE
       </p>
 
-      <div class="big-headline shine-text hero-question">NE VUOI<br>UNO GRATIS?</div>
+      <p class="description">
+        NE TERREMO 5 PER AVVIARE DEI NOSTRI BRAND, I RESTANTI 45 PRODOTTI LI
+        <span class="highlight">REGALEREMO</span> AI NOSTRI STUDENTI
+      </p>
 
-      <!-- ========================================================
-           FORM PRINCIPALE — form_location = "hero"
-           ======================================================== -->
+      <div class="big-headline shine-text hero-question">NE VUOI UNO?</div>
+    </section>
+
+    <!-- ==========================================================
+         VSL OPT-IN
+         Il testo del video (A2 - VSL OPT-IN) NON va mostrato in pagina.
+
+         TODO: NEW Q4 OPT-IN VIDALYTICS EMBED
+         Sostituire l'intero <div class="vsl-placeholder"> qui sotto con
+         l'embed Vidalytics Q4 definitivo. NON riutilizzare l'embed Q2.
+         ========================================================== -->
+    <section class="vsl-section">
+      <div class="vsl-frame" data-vsl="optin">
+        <div class="vsl-placeholder" role="img" aria-label="Video">
+          <svg aria-hidden="true">
+            <use href="#icon-play"></use>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         COPY INTRODUTTIVO + FORM PRINCIPALE — form_location = "hero"
+         ========================================================== -->
+    <section class="intro-form">
       <div class="signup-form-wrapper">
-        <!-- COPY PLACEHOLDER Q2 -->
-        <h3>RISERVA ORA IL <span>TUO POSTO</span> ALLA SERATA LIVE DI LUNEDÌ 12 OTTOBRE ORE 20:30!</h3>
+        <h3>
+          Iscriviti all'evento Live Gratuito del Lunedì 12 Ottobre e scopri come ricevere un
+          <span>Prodotto Vincente</span> con negozio online annesso, GIÀ pronto a vendere…
+        </h3>
+        <p class="form-intro">
+          Così non dovrai fare costruire tutto da zero mentre hai già una vita piena da mandare avanti…
+        </p>
 
         <form class="signup-form" data-form data-form-location="hero">
           <p class="form-error" data-form-error hidden role="alert"></p>
@@ -99,7 +131,7 @@
             </svg>
             <label class="visually-hidden" for="hero-email">Email</label>
             <input id="hero-email" type="email" name="email" autocomplete="email" inputmode="email"
-              placeholder="Email per accedere alle serate...">
+              placeholder="Inserisci la tua email">
           </div>
 
           <div class="form-field form-field--phone">
@@ -113,32 +145,23 @@
             </span>
             <label class="visually-hidden" for="hero-phone">Numero di cellulare</label>
             <input id="hero-phone" type="tel" name="phone_number" autocomplete="tel-national" inputmode="tel"
-              placeholder="Cellulare per bonus esclusivi...">
+              placeholder="Inserisci il tuo numero di cellulare">
           </div>
 
-          <!-- COPY PLACEHOLDER Q2 -->
           <button type="submit" class="form-submit">
             ISCRIVITI ORA
             <small>E riserva il tuo PRODOTTO VINCENTE!</small>
           </button>
         </form>
 
-        <!-- COPY PLACEHOLDER Q2 -->
         <p class="cta-note cta-note--on-green">* RISERVATO SOLO AI NOSTRI STUDENTI *</p>
-
-        <p class="form-note">
-          Partecipa all'evento Live Gratuito del Lunedì 12 Ottobre e scopri come ricevere un
-          <span class="underline-green">Prodotto Vincente</span> con negozio online annesso, già pronto a
-          vendere — così non dovrai fare costruire tutto da zero mentre hai già una vita piena da mandare avanti.
-        </p>
       </div>
     </section>
 
     <div class="divider"></div>
 
     <!-- ==========================================================
-         SEZIONE — Cosa significa ricevere un prodotto vincente
-         COPY PLACEHOLDER Q2
+         SEZIONE — Cosa significa ricevere un Prodotto Vincente?
          ========================================================== -->
     <section>
       <p class="sub-headline">COSA SIGNIFICA RICEVERE UN</p>
@@ -150,11 +173,10 @@
             <img src="./assets/benefit-1.png" alt="" loading="lazy">
           </div>
           <div class="benefit-card-body">
-            <svg class="benefit-check" aria-hidden="true">
-              <use href="#icon-check"></use>
-            </svg>
-            <p><strong>Non butti soldi per capire cosa funziona</strong><br>Il prodotto è già testato con soldi veri.
-              Sai già che la gente lo compra. Zero tempo perso. Zero tentativi a vuoto.</p>
+            <span class="benefit-emoji" aria-hidden="true">💰</span>
+            <p><strong>NON BUTTI VIA SOLDI PER CAPIRE COSA FUNZIONA:</strong><br>Perché ti diamo noi il prodotto già
+              testato con soldi veri. Che sai già che la gente lo compra. E che ti comprerà da solo, senza
+              complicazioni anche mentre dormi.</p>
           </div>
         </div>
 
@@ -163,11 +185,10 @@
             <img src="./assets/benefit-2.png" alt="" loading="lazy">
           </div>
           <div class="benefit-card-body">
-            <svg class="benefit-check" aria-hidden="true">
-              <use href="#icon-check"></use>
-            </svg>
-            <p><strong>Non perdi mesi a costruire tutto da solo</strong><br>Negozio, pubblicità, fornitori... è tutto
-              già pronto. Tu ricevi e parti. Anche se non hai mai acceso un computer per lavoro.</p>
+            <span class="benefit-emoji" aria-hidden="true">💰</span>
+            <p><strong>NON PERDI MESI A COSTRUIRE TUTTO DA SOLO:</strong><br>Perché ti diamo noi il negozio online, le
+              pubblicità, fornitori… tutta la macchina collaudata. Tu la ricevi e parti. Anche se con la tecnologia
+              sei una frana totale.</p>
           </div>
         </div>
 
@@ -176,11 +197,10 @@
             <img src="./assets/benefit-3.png" alt="" loading="lazy">
           </div>
           <div class="benefit-card-body">
-            <svg class="benefit-check" aria-hidden="true">
-              <use href="#icon-check"></use>
-            </svg>
-            <p><strong>Salti tutta la parte difficile</strong><br>Niente notti a cercare il prodotto giusto, niente
-              errori, niente confusione. Il 99% del lavoro è già fatto. A te resta solo l'1%.</p>
+            <span class="benefit-emoji" aria-hidden="true">💰</span>
+            <p><strong>SALTI TUTTA LA PARTE DIFFICILE:</strong><br>Niente notti a cercare il prodotto giusto, niente
+              errori, niente confusione. La maggior parte del lavoro è stata fatta. A te resta solo la minima parte da
+              svolgere.</p>
           </div>
         </div>
 
@@ -189,11 +209,10 @@
             <img src="./assets/benefit-4.png" alt="" loading="lazy">
           </div>
           <div class="benefit-card-body">
-            <svg class="benefit-check" aria-hidden="true">
-              <use href="#icon-check"></use>
-            </svg>
-            <p><strong>Puoi iniziare subito, anche con una vita piena</strong><br>Non devi trovare ore che non hai. La
-              macchina è già costruita e collaudata. Devi solo sederti e guidarla.</p>
+            <span class="benefit-emoji" aria-hidden="true">💰</span>
+            <p><strong>PUOI INIZIARE SUBITO, ANCHE CON UNA VITA PIENA:</strong><br>Anzi, è proprio ciò che ti
+              consentirà di ottenere risultati se hai una vita piena, poco tempo e mille rotture. Perché la macchina
+              che ti diamo è pronta. Devi solo sederti e guidarla.</p>
           </div>
         </div>
       </div>
@@ -210,26 +229,30 @@
     <div class="divider"></div>
 
     <!-- ==========================================================
-         SEZIONE — Perché regaliamo i prodotti  · COPY PLACEHOLDER Q2
+         SEZIONE — Perché abbiamo deciso di regalare 45 prodotti vincenti?
          ========================================================== -->
     <section>
       <p class="sub-headline">PERCHÉ ABBIAMO DECISO DI REGALARE</p>
-      <div class="big-headline">50 PRODOTTI VINCENTI?</div>
+      <div class="big-headline">45 PRODOTTI VINCENTI?</div>
 
       <div class="green-steps">
         <div class="green-step-card">
           <span class="green-step-number" aria-hidden="true">1</span>
-          <p>Ad Aprile testeremo circa <strong>100 prodotti</strong> per i nostri ecommerce
-            <strong>con i nostri soldi.</strong>
+          <p><strong class="step-title">A OTTOBRE TESTEREMO CIRCA 100 PRODOTTI</strong>
+            Abbiamo intenzione di lanciare dei nuovi brand, 5 nello specifico, in vista del Black Friday e del Natale
           </p>
         </div>
         <div class="green-step-card">
           <span class="green-step-number" aria-hidden="true">2</span>
-          <p>Di 100 prodotti, circa <strong>50 saranno vincenti</strong>. A noi ne serviranno solo 5.</p>
+          <p><strong class="step-title">DI 100 PRODOTTI, CIRCA 50 SARANNO VINCENTI</strong>
+            A noi ne serviranno solo 5. Quindi 45 restanti li dovremmo buttare
+          </p>
         </div>
         <div class="green-step-card">
           <span class="green-step-number" aria-hidden="true">3</span>
-          <p>Ecco perché gli altri prodotti abbiamo deciso di <strong>regalarli a voi.</strong></p>
+          <p><strong class="step-title">ABBIAMO DECISO DI REGALARLI A VOI</strong>
+            Invece di buttarli, abbiamo deciso di regalare i Prodotti Vincenti ai nostri studenti
+          </p>
         </div>
       </div>
 
@@ -241,76 +264,17 @@
       </div>
     </section>
 
-    <div class="divider"></div>
-
     <!-- ==========================================================
-         SEZIONE — Cosa ricevi  · COPY PLACEHOLDER Q2
-         ========================================================== -->
-    <section>
-      <p class="sub-headline">PARTECIPANDO ALL'EVENTO GRATUITO POTRESTI RICEVERE</p>
-      <div class="big-headline">1 PRODOTTO VINCENTE</div>
-      <p class="sub-headline">GIÀ TESTATO DALLA NOSTRA AZIENDA</p>
-
-      <div class="text-section text-big">
-        <p>Significa che ti diamo tutto quello che abbiamo già fatto noi per testare il prodotto e assicurarci che
-          funziona sul mercato reale...</p>
-        <p class="text-bold text-check">
-          <svg aria-hidden="true">
-            <use href="#icon-check"></use>
-          </svg>Il prodotto stesso...
-        </p>
-        <p class="text-bold text-check">
-          <svg aria-hidden="true">
-            <use href="#icon-check"></use>
-          </svg>Il negozio già costruito e ottimizzato...
-        </p>
-        <p class="text-bold text-check">
-          <svg aria-hidden="true">
-            <use href="#icon-check"></use>
-          </svg>Le pubblicità pronte da lanciare...
-        </p>
-        <p>Perché tutto quello che normalmente ti avrebbe rubato mesi di vita, centinaia di ore e soldi buttati su test
-          che non funzionano — lo abbiamo già fatto noi.</p>
-        <p>Tu dovrai solo imparare a guidare la macchina che ti mettiamo in mano.</p>
-        <p class="text-bold">In sostanza il 99% del lavoro è già fatto.</p>
-        <p class="text-bold">A te rimane solo quell'1% che rimane.</p>
-      </div>
-    </section>
-
-    <!-- ==========================================================
-         BLOCCO DATA EVENTO  · Serata 1: Lunedì 12 Ottobre 2026, ore 20:30
-         ========================================================== -->
-    <section>
-      <div class="event-date-section">
-        <p class="event-title">
-          ISCRIVITI ALL'EVENTO, PARTECIPA ALLA SERATA E SCOPRI COME RICEVERE IL TUO
-          <span class="highlight-gold">PRODOTTO VINCENTE</span>
-        </p>
-        <div class="event-date-card">
-          <div class="day-label">Lunedì</div>
-          <div class="day-number">12</div>
-          <div class="day-month">Ottobre</div>
-          <div class="day-time">ore 20:30</div>
-        </div>
-        <button type="button" class="form-submit" data-open-modal>
-          ISCRIVITI ORA<small>E riserva il tuo PRODOTTO VINCENTE!</small>
-        </button>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ==========================================================
-         SEZIONE — Testimonianze  · COPY PLACEHOLDER Q2
+         SEZIONE — Testimonianze
          ========================================================== -->
     <section class="section-green">
-      <p class="sub-headline">SE GIÀ SAI CHE GUADAGNARE 2-3-4-</p>
+      <p class="sub-headline">SAI GIÀ CHE GUADAGNARE 2-3-4 ANCHE</p>
       <div class="big-headline">5 MILA EURO AL MESE</div>
-      <p class="sub-headline">CON UN NEGOZIO ONLINE È FATTIBILE...</p>
+      <p class="sub-headline">EXTRA CON UN NEGOZIO ONLINE È FATTIBILE</p>
 
       <div class="text-section text-big">
-        <p>Se lo sai che <strong>è possibile...</strong></p>
-        <p>Se hai visto le <strong>testimonianze dei nostri studenti</strong>...</p>
+        <p>Lo sai che <strong>è possibile.</strong></p>
+        <p>Hai visto le <strong>testimonianze dei nostri studenti</strong>…</p>
       </div>
 
       <div class="slider-wrapper" aria-hidden="true">
@@ -343,147 +307,226 @@
       </div>
 
       <div class="text-section text-big">
-        <p>Eppure <strong>ancora non ci stai riuscendo</strong>...</p>
+        <p>Eppure <strong>ancora non ci stai riuscendo</strong>…</p>
         <p><strong>Perché?</strong></p>
         <p>Cosa te lo sta <strong>impedendo?</strong></p>
       </div>
 
-      <div class="big-headline">...PERCHÉ ALLORA TU</div>
+      <div class="big-headline">PERCHÉ ALLORA TU</div>
       <p class="sub-headline">NON STAI ANCORA GUADAGNANDO?</p>
 
       <div class="text-section text-big">
-        <p><strong>Perché molti nostri studenti stanno ottenendo risultati...</strong></p>
-        <p>...Mentre tu <strong>non ti stai mettendo in tasca 2-3-4-5 mila euro extra</strong> al mese nonostante hai
+        <p><strong>Perché molti stanno ottenendo risultati…</strong></p>
+        <p>…Mentre tu <strong>non ti stai mettendo in tasca 2-3-4-5 mila euro extra al mese</strong> nonostante hai
           magari anche investito in uno dei nostri percorsi?</p>
         <p class="text-bold">La colpa non è tua.</p>
-        <p>Non c'entra nulla la tua <strong>intelligenza.</strong></p>
-        <p>Non è che sei <strong>pigro o poco sveglio.</strong></p>
+        <p>Non è che sei <strong>pigro, svogliato…</strong></p>
+        <p>O non sei <strong>troppo sveglio.</strong></p>
+        <p>Non ti mancano le competenze, <strong>quelle le hai.</strong></p>
+        <p>Non c'entra nulla la tua <strong>intelligenza</strong></p>
         <p>E non ha nemmeno nulla a che fare con quanto sei <strong>bravo con la tecnologia.</strong></p>
       </div>
     </section>
 
-    <div class="divider"></div>
-
     <!-- ==========================================================
-         SEZIONE — Il problema  · COPY PLACEHOLDER Q2
+         SEZIONE — Il problema: la vita piena
          ========================================================== -->
     <section>
-      <p class="sub-headline">IL PROBLEMA È SEMPLICE: COME TUTTI</p>
-      <div class="big-headline">HAI UNA VITA</div>
-      <p class="sub-headline">DA MANDARE AVANTI</p>
+      <p class="sub-headline sub-headline--sm">IL PROBLEMA È SEMPLICE: COME TUTTI HAI</p>
+      <div class="big-headline">UNA COSA CHIAMATA “VITA”</div>
+      <p class="sub-headline sub-headline--sm">DA MANDARE AVANTI</p>
 
       <div class="text-section text-big">
-        <p>C'è <strong>il lavoro, la famiglia</strong>...</p>
+        <p>Il problema è semplice...</p>
+        <p>Come tutti, hai una cosa chiamata "vita" da mandare avanti.</p>
+        <p>C'è <strong>il lavoro, c'è la famiglia</strong>...</p>
         <p>Ci sono le bollette, la spesa, il mutuo, i figli, il cane, la suocera.</p>
         <p>C'è <strong>sempre qualcosa che arriva prima.</strong></p>
-        <p>E quella cosa che volevi costruire — quella <strong>seconda entrata che ti avrebbe cambiato la vita</strong>
-          — finisce sempre in fondo alla lista.</p>
-        <p><strong>Non perché non vuoi.</strong></p>
+        <p>E quella <strong>seconda entrata che ti avrebbe cambiato la vita?</strong></p>
+        <p>Finisce sempre in fondo alla lista.</p>
+        <p><strong>Non perché non vuoi…</strong></p>
         <p>Ma perché quando finalmente ti siedi, <strong>sei già a pezzi.</strong></p>
-        <p>E l'energia per iniziare qualcosa di nuovo <strong>non ce l'hai.</strong></p>
-        <p>Ce l'avevi stamattina, ma <strong>l'hai finita a lavoro.</strong></p>
-        <p>Così <strong>passano i mesi.</strong></p>
-        <p>E quella cosa rimane lì. In attesa. Mentre tu <strong>aspetti un momento libero che non arriva mai.</strong>
-        </p>
-        <p><strong>Questo è il problema...</strong></p>
+        <p>L'energia per iniziare qualcosa di nuovo <strong>non ce l'hai più.</strong></p>
+        <p>Ce l'avevi... ma <strong>l'hai lasciata al lavoro.</strong></p>
+        <p>Così <strong>passano le settimane, e poi i mesi.</strong></p>
+        <p>E quella cosa resta lì.</p>
+        <p>Ferma, in attesa.</p>
+        <p>Mentre tu <strong>aspetti un momento libero che non arriva mai.</strong></p>
+        <p class="text-bold">E questo è il vero problema...</p>
       </div>
 
-      <p class="sub-headline">SAI COSA FARE, COME FARLO...</p>
+      <p class="sub-headline">SAI COSA FARE, COME FARLO…</p>
       <div class="big-headline">MA NON HAI FISICAMENTE</div>
       <p class="sub-headline">NÉ IL TEMPO NÉ LE ENERGIE MENTALI PER FARLO</p>
 
       <div class="text-section text-big">
         <p><strong>Infatti il problema non sei tu.</strong></p>
-        <p>È che aprire un negozio online da zero richiede <strong>un discreto impegno.</strong></p>
-        <p>Niente di impossibile... ma <strong>serve una certa dedizione.</strong></p>
-        <p class="flash-warning">PERCHÉ LA VERITÀ È CHE NON BASTA "SCEGLIERE UN PRODOTTO E VENDERLO".</p>
+        <p>È che aprire un negozio online da zero richiede <strong>un certo impegno.</strong></p>
+        <p>Niente di impossibile... ma <strong>serve dedizione.</strong></p>
+        <p class="flash-warning">Perché la verità è che non basta "scegliere un prodotto e venderlo".</p>
       </div>
 
       <div class="red-steps">
         <div class="red-step-card">
           <span class="red-step-number" aria-hidden="true">1</span>
-          <p>Prima devi <strong>trovare il prodotto giusto</strong> — quello che il mercato vuole adesso, non tra sei
-            mesi quando è già morto.</p>
+          <p>Prima devi <strong>trovare il prodotto giusto</strong>...<br>Che il mercato vuole adesso, non tra sei
+            mesi, ora.</p>
         </div>
         <div class="red-step-card">
           <span class="red-step-number" aria-hidden="true">2</span>
-          <p>Poi <strong>costruire lo store</strong>, scrivere i testi, caricare le foto, ottimizzare ogni pagina perché
-            chi arriva non scappi via dopo tre secondi.</p>
+          <p>Poi <strong>costruire lo store</strong>, scrivere i testi, caricare le foto, sistemare ogni pagina perché
+            chi arriva non scappi dopo tre secondi.</p>
         </div>
         <div class="red-step-card">
           <span class="red-step-number" aria-hidden="true">3</span>
-          <p>Poi <strong>creare le pubblicità giuste</strong>, quelle che fermano le persone mentre scorrono il telefono
+          <p>Poi <strong>creare le pubblicità giuste</strong>…<br>Che fermano le persone mentre scorrono il telefono
             sul divano alle undici di sera.</p>
         </div>
         <div class="red-step-card">
           <span class="red-step-number" aria-hidden="true">4</span>
-          <p>Poi <strong>impostare le campagne</strong>, capire i numeri, aggiustare, ottimizzare.</p>
+          <p>Poi <strong>impostare le campagne</strong>, leggere i numeri, aggiustare, ottimizzare.</p>
         </div>
         <div class="red-step-card">
           <span class="red-step-number" aria-hidden="true">5</span>
-          <p>Poi trovare <strong>fornitori seri</strong> che non ti facciano fare brutte figure con i clienti.</p>
+          <p>Poi trovare <strong>fornitori seri</strong>, che non ti facciano fare brutte figure coi clienti.</p>
         </div>
       </div>
 
       <div class="text-section text-big">
-        <p>E fare tutto ciò <strong>richiede tempo...</strong></p>
-        <p>Inoltre comporta <strong>commettere errori, sbattere la testa, sprecare un po' di soldi e tempo...</strong>
-        </p>
-        <p>Finché alla fine dopo <strong>3-4-5 a volte anche 7-8 mesi</strong> trovi la quadra.</p>
+        <p>E tutto questo <strong>richiede tempo...</strong></p>
+        <p>Significa <strong>sbagliare, sbattere la testa, bruciare un po' di soldi...</strong></p>
+        <p>Finché, dopo <strong>3, 4, 5... a volte anche 7-8 mesi...</strong> finalmente trovi la quadra.</p>
         <p><strong>Però ammettiamolo...</strong></p>
       </div>
     </section>
 
     <!-- ==========================================================
-         SEZIONE — Non vuoi aspettare  · COPY PLACEHOLDER Q2
+         SEZIONE — Tu NON vuoi aspettare
          ========================================================== -->
     <section class="section-green">
       <div class="big-headline">TU NON VUOI ASPETTARE MESI</div>
-      <p class="sub-headline">PRIMA DI GUADAGNARE 2-3-4-5 MILA EURO AL MESE, GIUSTO?</p>
+      <p class="sub-headline sub-headline--sm">PRIMA DI GUADAGNARE 2-3-4-5 MILA EURO AL MESE</p>
+      <p class="headline-tail">– se sei come molti studenti <strong>vuoi ottenere risultati subito</strong>…</p>
 
       <div class="text-section text-big">
-        <p>E hai ragione.</p>
-        <p>Perché mentre aspetti, le bollette non aspettano.</p>
+        <p class="text-bold">E hai ragione.</p>
+        <p>Perché mentre tu aspetti, <strong>le bollette non aspettano.</strong></p>
         <p>Lo stipendio non cresce.</p>
         <p>Le spese non si fermano.</p>
-        <p>E ogni mese che passa è un altro mese in cui ti stai accontentando.</p>
-        <p>Accettando di vivere una vita fatta di rinunce e sacrifici che alla fine non ti meriti.</p>
-        <p>Ecco perché la cosa più intelligente che puoi fare adesso è</p>
+        <p>E ogni mese che passa è un altro mese in cui <strong>ti accontenti...</strong></p>
+        <p>In cui accetti una vita fatta di rinunce e di sacrifici che, alla fine, <strong>non ti meriti.</strong></p>
       </div>
+    </section>
 
-      <p class="sub-headline">ISCRIVERTI AL NUOVO</p>
-      <div class="big-headline">EVENTO LIVE</div>
-      <p class="sub-headline">GRATUITO DI LUNEDÌ 12 OTTOBRE ORE 20:30</p>
+    <!-- ==========================================================
+         SEZIONE — Presentazione nuovo evento / test prodotti
+         ========================================================== -->
+    <section>
+      <p class="sub-headline sub-headline--sm">PERCHÉ LA COSA PIÙ INTELLIGENTE CHE PUOI FARE ADESSO È ISCRIVERTI AL
+        MIO NUOVO</p>
+      <div class="big-headline">EVENTO LIVE GRATUITO</div>
+      <p class="sub-headline sub-headline--sm">DI LUNEDÌ 12 OTTOBRE 2026 ORE 20:30 IN PUNTO?</p>
 
       <div class="text-section text-big">
-        <p>Perché stiamo aprendo nuovi mercati.</p>
-        <p>E per farlo, il nostro team testerà oltre 100 prodotti — sul mercato reale, con soldi veri, che investirò io
-          personalmente e che porteranno risultati concreti.</p>
-        <p>Tangibili, verificabili, misurabili, nero su bianco.</p>
-        <p>E dei 100 prodotti che testeremo mi aspetto che circa 50 usciranno vincenti.</p>
-        <p>Per vincenti intendo prodotti che la gente vuole e che compra senza pensarci 2 volte.</p>
-        <p>La cosa interessante?</p>
-        <p><strong>A noi ne servono solo 5 per avviare i nostri nuovi brand.</strong></p>
-        <p>I restanti 45 non sappiamo cosa farcene anche perché saranno comunque prodotti che hanno tutte le carte in
-          regola per fare 10-20-30 mila euro al mese.</p>
-        <p>Noi non li utilizzeremo semplicemente perché abbiamo le risorse per sfruttarne 5 al massimo.</p>
-        <p>Quindi invece di buttarli nel cestino...</p>
-        <p class="text-bold">Abbiamo deciso di consegnarli ai nostri studenti.</p>
-        <p>E a chi li daremo lo decideremo durante il mio nuovo evento live.</p>
+        <p>Perché stiamo aprendo <strong>nuovi mercati</strong>, in vista di ottobre, novembre e dicembre.</p>
+        <p>Per farlo il nostro team testerà <strong>oltre 100 prodotti</strong>...</p>
+        <p>Sul mercato reale, <strong>con soldi veri</strong>, che metterò io di tasca mia.</p>
+        <p>E di quei 100 prodotti, mi aspetto che <strong>circa 50 usciranno vincenti.</strong></p>
+        <p>Per "vincenti" intendo prodotti che la gente vuole e che compra senza pensarci due volte.</p>
+        <p class="text-bold">La cosa interessante?</p>
+        <p>A noi ne servono <strong>solo cinque</strong> per avviare i nostri nuovi brand.</p>
+        <p>Gli altri 45 non sapremmo cosa farcene...</p>
+        <p>Anche se restano prodotti con tutte le carte in regola per costruirci sopra
+          <strong>una seconda entrata da 2, 3, anche 4 mila euro al mese.</strong>
+        </p>
+        <p>Non li useremo per un motivo semplice.</p>
+        <p>Abbiamo le risorse per sfruttarne 5, non di più.</p>
+        <p>Quindi, invece di buttarli nel cestino...</p>
+        <p class="text-bold">Abbiamo deciso di REGALARLI ad alcuni nostri studenti.</p>
+        <p>E a chi li daremo, lo decideremo durante il mio nuovo evento live.</p>
       </div>
+    </section>
 
-      <div class="cta-wrapper">
-        <button type="button" class="cta-button" data-open-modal>
+    <!-- ==========================================================
+         SEZIONE — Cosa ricevi partecipando all'evento
+         ========================================================== -->
+    <section class="section-green">
+      <p class="question-label">Questo cosa significa?</p>
+
+      <p class="sub-headline sub-headline--sm">PARTECIPANDO AL MIO NUOVO EVENTO RICEVERAI</p>
+      <div class="big-headline">1 DEI 45 PRODOTTI VINCENTI</div>
+      <p class="sub-headline sub-headline--sm">(E NON SOLO) CON IL POTENZIALE DI FARTI FARE 2-3-5 MILA EURO AL MESE…
+      </p>
+
+      <div class="text-section text-big">
+        <p>Significa che ti diamo tutto quello che abbiamo già fatto noi per testare il prodotto e assicurarci che
+          funziona sul mercato reale...</p>
+        <p class="text-bold text-check">
+          <svg aria-hidden="true">
+            <use href="#icon-check"></use>
+          </svg>Il prodotto stesso...
+        </p>
+        <p class="text-bold text-check">
+          <svg aria-hidden="true">
+            <use href="#icon-check"></use>
+          </svg>Il negozio già costruito e ottimizzato...
+        </p>
+        <p class="text-bold text-check">
+          <svg aria-hidden="true">
+            <use href="#icon-check"></use>
+          </svg>Le pubblicità pronte da lanciare...
+        </p>
+        <p class="text-bold text-check">
+          <svg aria-hidden="true">
+            <use href="#icon-check"></use>
+          </svg><span>E persino i fornitori già trovati, verificati, e con cui abbiamo già chiuso i migliori
+            accordi.</span>
+        </p>
+        <p>Perché tutto quello che normalmente ti avrebbe rubato mesi di vita, centinaia di ore e soldi buttati in test
+          che non funzionano... <strong>lo abbiamo già fatto noi.</strong></p>
+        <p class="text-bold">A te resta solo salire sulla “macchina” che ti consegniamo e guidarla.</p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SEZIONE — Black Friday / Cyber Monday / Natale
+         ========================================================== -->
+    <section>
+      <div class="callout">
+        <p class="callout__title">E il momento per salirci è adesso.</p>
+        <p>Perché tra poche settimane arrivano <strong>Black Friday, Cyber Monday e Natale</strong>... e cioè il
+          periodo in cui la gente online compra più che in tutto il resto dell'anno.</p>
+        <p>Chi ha il negozio già pronto per allora, <strong>in quei tre mesi incassa più che in tutti gli altri messi
+            insieme.</strong></p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         BLOCCO DATA EVENTO — Lunedì 12 Ottobre 2026, ore 20:30
+         ========================================================== -->
+    <section>
+      <div class="event-date-section">
+        <p class="event-title">
+          Iscriviti all’evento, partecipa e scopri come ricevere un
+          <span class="highlight-gold">Prodotto Vincente</span> pronto a farti guadagnare migliaia di euro al mese….
+        </p>
+        <div class="event-date-card">
+          <div class="day-label">Lunedì</div>
+          <div class="day-number">12</div>
+          <div class="day-month">Ottobre</div>
+          <div class="day-time">ore 20:30</div>
+        </div>
+        <button type="button" class="form-submit" data-open-modal>
           ISCRIVITI ORA<small>E riserva il tuo PRODOTTO VINCENTE!</small>
         </button>
-        <p class="cta-note">* RISERVATO SOLO AI NOSTRI STUDENTI *</p>
+        <p class="cta-note cta-note--on-green">* RISERVATO SOLO AI NOSTRI STUDENTI *</p>
       </div>
     </section>
 
     <div class="divider"></div>
 
     <!-- ==========================================================
-         SEZIONE — Bio  · COPY PLACEHOLDER Q2
+         SEZIONE — Chi è Gabriele Sartori?
          ========================================================== -->
     <section>
       <p class="sub-headline">CHI È</p>
@@ -499,8 +542,8 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Da cameriere a imprenditore digitale di successo</strong><br>Ha trasformato la sua vita partendo
-              da zero, dimostrando che non servono "circostanze perfette"... ma un metodo giusto.</p>
+            <p><strong>Da cameriere a imprenditore digitale di successo:</strong> ha trasformato la sua vita partendo da
+              zero, dimostrando che non servono “circostanze perfette”… ma un metodo giusto.</p>
           </div>
         </div>
         <div class="benefit-card">
@@ -508,7 +551,7 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Ha aiutato oltre 3.000 persone comuni</strong><br>Con un lavoro e una famiglia, a costruire una
+            <p><strong>Ha aiutato oltre 3.000 persone comuni</strong> – con un lavoro e una famiglia – a costruire una
               seconda entrata mensile, libera dal tempo e gestibile anche con pochi minuti al giorno.</p>
           </div>
         </div>
@@ -517,8 +560,8 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Ha creato e lanciato decine di business online</strong><br>Che continuano a generare rendite
-              automatiche 24/7... e ha insegnato ad altri come replicare lo stesso sistema.</p>
+            <p><strong>Ha creato e lanciato decine di business online</strong>, che continuano a generare rendite
+              automatiche 24/7… e ha insegnato ad altri come replicare lo stesso sistema.</p>
           </div>
         </div>
         <div class="benefit-card">
@@ -526,8 +569,8 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Fondatore della Sartori Academy</strong><br>Una scuola di formazione digitale che ha trasformato
-              la vita economica di migliaia di studenti in tutta Italia.</p>
+            <p><strong>Fondatore della Sartori Academy</strong>, una scuola di formazione digitale che ha trasformato la
+              vita economica di migliaia di studenti in tutta Italia.</p>
           </div>
         </div>
         <div class="benefit-card">
@@ -535,8 +578,8 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Metodo sicuro, testato su centinaia di studenti</strong><br>Nel 2025 ha codificato un sistema per
-              guadagnare online anche partendo da zero e senza dover "inventarsi nulla".</p>
+            <p><strong>Ha finalmente codificato un metodo sicuro, testato su centinaia di studenti</strong>, per
+              guadagnare online anche partendo da zero e senza dover “inventarsi nulla”.</p>
           </div>
         </div>
         <div class="benefit-card">
@@ -544,7 +587,7 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Sfrutta l'intelligenza artificiale</strong><br>Per anticipare le tendenze del mercato.</p>
+            <p><strong>Sfrutta l’intelligenza artificiale</strong> per anticipare le tendenze del mercato.</p>
           </div>
         </div>
         <div class="benefit-card">
@@ -552,7 +595,7 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Approccio 100% pratico e orientato al risultato</strong><br>Senza fuffa o promesse vuote: solo
+            <p><strong>Approccio 100% pratico e orientato al risultato</strong>, senza fuffa o promesse vuote: solo
               strategie concrete, già applicate con successo.</p>
           </div>
         </div>
@@ -561,8 +604,8 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Vive a Dubai</strong><br>Segue personalmente gli studenti della sua Academy, oltre a sviluppare
-              nuove soluzioni per chi vuole costruirsi un'entrata online reale e sostenibile.</p>
+            <p><strong>Vive a Dubai</strong> e segue personalmente gli studenti della sua Academy, oltre a sviluppare
+              nuove soluzioni per chi vuole costruirsi un’entrata online reale e sostenibile.</p>
           </div>
         </div>
       </div>
@@ -578,13 +621,13 @@
     <div class="divider"></div>
 
     <!-- ==========================================================
-         SEZIONE — È adatto a te se  · COPY PLACEHOLDER Q2
+         SEZIONE — Questo evento è adatto anche a te, se:
          ========================================================== -->
     <section>
       <p class="big-headline">QUESTO EVENTO</p>
       <div class="sub-headline">È ADATTO<br>ANCHE A TE, SE:</div>
 
-      <div class="benefit-cards">
+      <div class="benefit-cards inline-strong-cards">
         <div class="benefit-card">
           <div class="benefit-card-img">
             <img src="./assets/adatto-1.png" alt="" loading="lazy">
@@ -593,7 +636,7 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Hai un lavoro, una famiglia, una vita piena</strong><br>L'idea di costruire qualcosa da zero ti
+            <p><strong>Hai un lavoro, una famiglia, una vita piena</strong> — e l'idea di costruire qualcosa da zero ti
               sembra impossibile con il tempo e le energie che ti restano a fine giornata.</p>
           </div>
         </div>
@@ -605,7 +648,7 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Sai che si può guadagnare online</strong><br>Lo vedi ogni giorno, ma tra il saperlo e il farlo
+            <p><strong>Sai che si può guadagnare online, lo vedi ogni giorno</strong> — ma tra il saperlo e il farlo
               c'è un muro che da solo non riesci a superare.</p>
           </div>
         </div>
@@ -617,7 +660,7 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Hai paura di buttare soldi e mesi interi</strong><br>In qualcosa che alla fine non funziona.</p>
+            <p><strong>Hai paura di buttare soldi e mesi interi</strong> in qualcosa che alla fine non funziona.</p>
           </div>
         </div>
         <div class="benefit-card">
@@ -628,8 +671,8 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Non sei pratico con la tecnologia</strong><br>Tutto quello che hai visto finora ti è sembrato
-              troppo complicato e hai pensato che non facesse per te.</p>
+            <p><strong>Non sei pratico con la tecnologia</strong> e tutto quello che hai visto finora ti è sembrato
+              troppo complicato — e hai pensato che non facesse per te.</p>
           </div>
         </div>
         <div class="benefit-card">
@@ -640,7 +683,7 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Non vuoi studiare per mesi</strong><br>Non vuoi diventare un esperto di niente, vuoi solo
+            <p><strong>Non vuoi studiare per mesi, non vuoi diventare un esperto di niente</strong> — vuoi solo
               qualcosa che funziona già e che qualcuno ti mette in mano pronto.</p>
           </div>
         </div>
@@ -652,8 +695,8 @@
             <svg class="benefit-check" aria-hidden="true">
               <use href="#icon-check"></use>
             </svg>
-            <p><strong>Sei stanco di rimandare</strong><br>Vuoi finalmente vedere qualcosa muoversi nella tua situazione
-              economica, senza dover fare tutto da solo.</p>
+            <p><strong>Sei stanco di rimandare</strong> e vuoi finalmente vedere qualcosa muoversi nella tua situazione
+              economica — senza dover fare tutto da solo.</p>
           </div>
         </div>
       </div>
@@ -669,7 +712,7 @@
     <div class="divider"></div>
 
     <!-- ==========================================================
-         SEZIONE — FAQ  · COPY PLACEHOLDER Q2
+         SEZIONE — FAQ
          ========================================================== -->
     <section class="faq-section">
       <div class="big-headline">DOMANDE FREQUENTI</div>
@@ -678,78 +721,87 @@
       <details>
         <summary>1. L'evento è davvero gratuito? Dove sta la fregatura?</summary>
         <div class="faq-answer">
-          Sì, è <strong>100% gratuito</strong>. Niente carte di credito, abbonamenti o sorprese. Ti basta iscriverti,
-          collegarti <strong>Lunedì 12 Ottobre alle 20:30</strong> e guardare la diretta. Tutto qui.
+          <p>Partecipare all'evento è <strong>100% gratuito</strong>. Niente carta di credito, niente abbonamenti. Ti
+            iscrivi, ti colleghi <strong>Lunedì 12 Ottobre alle 20:30</strong> e guardi la diretta. La fregatura non
+            c'è, e durante l'evento ti spieghiamo tutto con la massima trasparenza.</p>
         </div>
       </details>
 
       <details>
         <summary>2. Cosa succede durante l'evento?</summary>
         <div class="faq-answer">
-          Spieghiamo come funziona il nostro <strong>processo di selezione dei prodotti vincenti</strong> e come
-          decideremo a chi consegnarli. Scoprirai cosa include esattamente — <strong>prodotto, store, pubblicità,
-            campagne, fornitori</strong> — e cosa dovrai fare tu per riceverne uno.
+          <p>Ti spieghiamo come funziona il nostro <strong>processo di selezione dei prodotti vincenti</strong> e come
+            decidiamo a chi consegnarli. Scoprirai cosa include esattamente... <strong>il prodotto, lo store, le
+              pubblicità, le campagne, i fornitori</strong>... e cosa devi fare tu per riceverne uno.</p>
         </div>
       </details>
 
       <details>
-        <summary>3. Ma è vero che posso avere un negozio online già pronto senza costruire tutto da solo?</summary>
+        <summary>3. Ma è vero che posso avere un negozio online già pronto senza costruirlo da solo?</summary>
         <div class="faq-answer">
-          Esatto. Il prodotto è <strong>già testato sul mercato reale</strong>. Lo store è già costruito. Le pubblicità
-          sono già pronte. I fornitori già trovati. <strong>Tu non devi costruire niente da zero</strong> — devi solo
-          imparare a gestire quello che ti consegniamo. <strong>Il 99% del lavoro lo abbiamo già fatto noi.</strong>
+          <p>Esatto. Il prodotto è <strong>già testato sul mercato reale</strong>. Lo store è già costruito. Le
+            pubblicità sono già pronte. I fornitori già selezionati. <strong>Tu non devi costruire niente da
+              zero</strong>... devi solo imparare a gestire quello che ti consegniamo. <strong>Il 99% del lavoro l'abbiamo
+              già fatto noi.</strong></p>
         </div>
       </details>
 
       <details>
-        <summary>4. E se non ho esperienza con i negozi online o con la tecnologia?</summary>
+        <summary>4. E se non ho esperienza coi negozi online o con la tecnologia?</summary>
         <div class="faq-answer">
-          È esattamente per questo che esiste questo evento. <strong>Non servono competenze tecniche.</strong> Se sai
-          usare WhatsApp o controllare il conto dal telefono, sei già a posto. Il punto è proprio che <strong>non devi
-            diventare un esperto</strong> — devi solo guidare una macchina che ti mettiamo in mano.
+          <p>È esattamente per questo che esiste questo evento. <strong>Non servono competenze tecniche.</strong> Se
+            sai usare WhatsApp o controllare il conto dal telefono, sei già a posto.</p>
+          <p>Il punto è proprio questo... <strong>non devi diventare un esperto</strong>, devi solo guidare una
+            macchina che ti mettiamo in mano.</p>
         </div>
       </details>
 
       <details>
         <summary>5. Quanto tempo mi serve al giorno?</summary>
         <div class="faq-answer">
-          <strong>Pochissimo.</strong> È pensato apposta per chi ha già <strong>un lavoro a tempo pieno</strong> e una
-          vita piena di impegni. Non stai costruendo qualcosa da zero — stai gestendo <strong>qualcosa che esiste
-            già.</strong>
+          <p><strong>Pochi minuti, nei tempi morti della giornata.</strong> È pensato apposta per chi ha già
+            <strong>un lavoro a tempo pieno</strong> e una vita piena di impegni. Non stai costruendo qualcosa da
+            zero... stai gestendo <strong>qualcosa che esiste già.</strong>
+          </p>
         </div>
       </details>
 
       <details>
         <summary>6. Devo investire dei soldi per iniziare?</summary>
         <div class="faq-answer">
-          Durante l'evento ti spieghiamo cosa serve. Quello che <strong>non dovrai fare è sprecare budget su mesi di
-            test</strong> per trovare un prodotto che funziona. Perché <strong>lo abbiamo già fatto noi per te.</strong>
+          <p>All'evento ti spieghiamo per filo e per segno cosa serve, senza nasconderti niente. Quello che di sicuro
+            <strong>non dovrai fare è bruciare budget in mesi di test</strong> per trovare un prodotto che funziona...
+            perché <strong>quello l'abbiamo già fatto noi, coi nostri soldi.</strong>
+          </p>
         </div>
       </details>
 
       <details>
         <summary>7. Perché lo fate gratis? Dove guadagnate voi?</summary>
         <div class="faq-answer">
-          Perché i prodotti li abbiamo <strong>già testati con i nostri soldi</strong> e a noi ne servono solo 5. Gli
-          altri 45 sarebbero sprecati. Se funziona per te, <strong>diventi il nostro prossimo caso studio</strong> — e
-          questo per noi vale più di qualsiasi pagamento. <strong>Prima ti dimostriamo che funziona</strong>, poi
-          deciderai tu il resto.
+          <p>Perché questi prodotti li abbiamo <strong>già testati coi nostri soldi</strong>, e a noi ne servono solo
+            5 per lanciare i nostri nuovi brand. Gli altri 45 resterebbero chiusi in un cassetto, sprecati.</p>
+          <p>Tenerli lì non ci fa guadagnare niente... <strong>darli a uno dei nostri studenti, invece, ha
+              senso.</strong> All'evento ti mostriamo come, e cosa decidi di farci dopo è una scelta tua.</p>
         </div>
       </details>
 
       <details>
         <summary>8. I posti sono davvero limitati?</summary>
         <div class="faq-answer">
-          Sì. <strong>I prodotti sono 45</strong> e le persone che si iscriveranno saranno molte di più. <strong>Non
-            possiamo consegnare un negozio a migliaia di persone</strong> contemporaneamente.
+          <p>Sì. <strong>I prodotti sono 45</strong>, e le persone che si iscriveranno saranno molte di più.
+            <strong>Non possiamo consegnare un negozio a migliaia di persone.</strong> Per questo c'è una selezione, e
+            te la spieghiamo durante l'evento.
+          </p>
         </div>
       </details>
 
       <details>
-        <summary>9. Cosa succede se non riesco a ottenere uno dei 45 prodotti?</summary>
+        <summary>9. E se non riesco a ottenere uno dei 45 prodotti?</summary>
         <div class="faq-answer">
-          <strong>Perdi l'opportunità.</strong> I prodotti sono limitati. Durante l'evento spiegheremo i criteri con cui
-          li assegniamo — ma <strong>se non sei presente, la possibilità non esiste.</strong>
+          <p>Allora, per questa volta, <strong>resti fuori.</strong> I prodotti sono limitati, e quando finiscono
+            finiscono. All'evento ti spieghiamo con quali criteri li assegniamo... ma <strong>se non sei presente,
+              quella possibilità non esiste proprio.</strong></p>
         </div>
       </details>
 
@@ -764,7 +816,7 @@
   </div>
 
   <!-- ============================================================
-       FOOTER — COPY PLACEHOLDER Q2
+       FOOTER
        ============================================================ -->
   <div class="footer">
     © 2026 Sartori Academy. Tutti i diritti riservati.
@@ -779,7 +831,12 @@
     <div class="modal__dialog">
       <button type="button" class="modal__close" data-close-modal aria-label="Chiudi">&times;</button>
 
-      <img class="modal__headline" src="./assets/popup-headline.svg" alt="" width="1080" height="885">
+      <!-- Headline popup in HTML/CSS (nessuna immagine: testo modificabile) -->
+      <div class="modal__headline">
+        <p class="modal__headline-big">50 PRODOTTI VINCENTI</p>
+        <p class="modal__headline-sub">Da potenzialmente<br><span>5-10-20 MILA EURO</span></p>
+        <p class="modal__headline-question shine-text">NE VUOI UNO?</p>
+      </div>
 
       <div class="signup-form-wrapper">
         <form class="signup-form" data-form data-form-location="popup">
@@ -799,7 +856,7 @@
             </svg>
             <label class="visually-hidden" for="popup-email">Email</label>
             <input id="popup-email" type="email" name="email" autocomplete="email" inputmode="email"
-              placeholder="Email per accedere alle serate...">
+              placeholder="Inserisci la tua email">
           </div>
 
           <div class="form-field form-field--phone">
@@ -813,10 +870,9 @@
             </span>
             <label class="visually-hidden" for="popup-phone">Numero di cellulare</label>
             <input id="popup-phone" type="tel" name="phone_number" autocomplete="tel-national" inputmode="tel"
-              placeholder="Cellulare per bonus esclusivi...">
+              placeholder="Inserisci il tuo numero di cellulare">
           </div>
 
-          <!-- COPY PLACEHOLDER Q2 -->
           <button type="submit" class="form-submit">
             ISCRIVITI ORA
             <small>E riserva il tuo PRODOTTO VINCENTE!</small>
