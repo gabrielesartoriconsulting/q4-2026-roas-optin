@@ -66,6 +66,8 @@
      I parametri vengono letti all'apertura della pagina e conservati in
      sessionStorage, così sopravvivono a navigazioni interne e ricariche
      per tutta la permanenza sulla pagina.
+     Se l'URL corrente non ha NESSUN parametro, la memoria viene azzerata:
+     una visita diretta non eredita la provenienza di un'apertura precedente.
      ====================================================================== */
 
   var Tracking = (function () {
@@ -95,8 +97,18 @@
     }
 
     function init() {
-      var stored = readFromStorage();
       var fresh = readFromUrl();
+      var hasFresh = Object.keys(fresh).length > 0;
+
+      // Arrivo pulito (es. roas.sartorigabriele.com senza query): è una visita
+      // diretta e resta tale. Niente eredità dalla sessione, altrimenti un
+      // vecchio ?s=... di un'apertura precedente ripartirebbe verso il webhook
+      // come se fosse la provenienza di questa visita.
+      if (!hasFresh) {
+        storage.remove(CFG.TRACKING_STORAGE_KEY);
+      }
+
+      var stored = hasFresh ? readFromStorage() : {};
 
       // I parametri presenti nell'URL corrente vincono su quelli memorizzati.
       CFG.TRACKING_PARAMS.forEach(function (key) {
@@ -104,11 +116,13 @@
         data[key] = value !== undefined ? value : null;
       });
 
-      var toStore = {};
-      CFG.TRACKING_PARAMS.forEach(function (key) {
-        if (data[key] !== null) toStore[key] = data[key];
-      });
-      storage.set(CFG.TRACKING_STORAGE_KEY, JSON.stringify(toStore));
+      if (hasFresh) {
+        var toStore = {};
+        CFG.TRACKING_PARAMS.forEach(function (key) {
+          if (data[key] !== null) toStore[key] = data[key];
+        });
+        storage.set(CFG.TRACKING_STORAGE_KEY, JSON.stringify(toStore));
+      }
     }
 
     return {

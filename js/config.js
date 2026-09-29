@@ -46,8 +46,10 @@
 
   var FORM = {
     DEFAULT_COUNTRY: 'IT',
-    // Riempie il campo "source" del payload quando in URL non c'è nulla.
-    DEFAULT_SOURCE: 'direct',
+    // Provenienza da usare quando in URL non c'è nulla.
+    // null = non si inventa niente: una visita diretta parte SENZA provenienza,
+    // così il webhook distingue "arrivato senza parametri" da una provenienza vera.
+    DEFAULT_SOURCE: null,
     // Salva una bozza dei campi in sessionStorage: se n8n risponde con errore
     // e l'utente ricarica, non perde quello che ha scritto.
     KEEP_DRAFT: true,
