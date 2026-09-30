@@ -4,7 +4,7 @@
    js/config.js: qui non ci sono URL, nomi evento o date hardcoded.
 
    Moduli:
-     Tracking  — cattura e conserva s / l / t / id + utm_*
+     Tracking  — cattura e conserva s / l / t / id / ref + utm_*
      Phone     — selettore prefisso internazionale senza dipendenze
      Forms     — un solo handler condiviso per tutti i form (hero, popup, ...)
      Modal     — apertura/chiusura del popup d'iscrizione
@@ -62,7 +62,7 @@
   }
 
   /* ======================================================================
-     Tracking — s / l / t / id + utm_*
+     Tracking — s / l / t / id / ref + utm_*
      I parametri vengono letti all'apertura della pagina e conservati in
      sessionStorage, così sopravvivono a navigazioni interne e ricariche
      per tutta la permanenza sulla pagina.
@@ -336,8 +336,35 @@
       }
     }
 
+    /**
+     * Codice venditore del CRM Sartori. Puo' arrivare da tre posti, in ordine
+     * di affidabilita':
+     *   1. ?ref= / ?seller_ref= in URL (gia' catturati da Tracking);
+     *   2. l'input nascosto che l'embed del CRM inietta in ogni form;
+     *   3. la memoria dell'embed (localStorage/cookie, 30 giorni), l'unico
+     *      posto dove il codice sopravvive se la persona torna sulla pagina
+     *      senza il parametro in URL.
+     * Senza questo, quelle visite arrivano a n8n senza provenienza.
+     */
+    function readRef(form, tracking) {
+      var fromUrl = tracking.ref || tracking.seller_ref;
+      if (fromUrl) return fromUrl;
+
+      var hidden = $('[name="ref"]', form);
+      if (hidden && hidden.value) return hidden.value;
+
+      try {
+        if (window.CRMTrack && window.CRMTrack.ref) return window.CRMTrack.ref;
+        if (window.crmRef) return window.crmRef;
+      } catch (e) {
+        // embed non caricato o bloccato: si prosegue senza codice venditore
+      }
+      return null;
+    }
+
     function buildPayload(form, values, phone) {
       var tracking = Tracking.all();
+      var ref = readRef(form, tracking);
       return {
         // --- Campi obbligatori attesi dal workflow n8n ---
         nome: values.name,
@@ -349,6 +376,7 @@
         l: tracking.l,
         t: tracking.t,
         id: tracking.id,
+        ref: ref,
 
         // --- Campi aggiuntivi (stessi dati, forma estesa) ---
         name: values.name,
@@ -364,6 +392,7 @@
           l: tracking.l,
           t: tracking.t,
           id: tracking.id,
+          ref: ref,
           utm_source: tracking.utm_source,
           utm_medium: tracking.utm_medium,
           utm_campaign: tracking.utm_campaign,

@@ -67,8 +67,12 @@
      5) Parametri di tracking raccolti all'apertura della pagina
      ------------------------------------------------------------------------ */
 
+  // 'ref' / 'seller_ref' = codice venditore del CRM Sartori (embed nell'<head>
+  // di index.html). Va raccolto e inoltrato come gli altri: se resta fuori da
+  // questa lista, un arrivo dal link di un venditore parte verso n8n senza
+  // nessun parametro e viene registrato come "PARAMETRO MANCANTE".
   var TRACKING_PARAMS = [
-    's', 'l', 't', 'id',
+    's', 'l', 't', 'id', 'ref', 'seller_ref',
     'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'
   ];
 

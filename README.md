@@ -88,7 +88,7 @@ workflow n8n; i successivi sono aggiuntivi e possono essere ignorati lato n8n.
   "telefono": "+393331234567",
   "evento": "Q4 2026 ROAS",
   "url": "https://.../index.html?s=...",
-  "s": "...", "l": "...", "t": "...", "id": "...",
+  "s": "...", "l": "...", "t": "...", "id": "...", "ref": "...",
 
   "name": "Mario Rossi",
   "phone": "+393331234567", "phone_prefix": "+39", "phone_number": "3331234567",
@@ -96,7 +96,7 @@ workflow n8n; i successivi sono aggiuntivi e possono essere ignorati lato n8n.
   "event": "Q4 2026 ROAS",
   "page": "Q4 2026 ROAS - Opt-In",
   "source": "...",
-  "tracking": { "s": null, "l": null, "t": null, "id": null,
+  "tracking": { "s": null, "l": null, "t": null, "id": null, "ref": null,
                 "utm_source": null, "utm_medium": null,
                 "utm_campaign": null, "utm_term": null, "utm_content": null },
   "submitted_at": "2026-09-17T12:00:00.000Z"
@@ -113,9 +113,25 @@ In caso di errore i dati restano nel form (e in una bozza in `sessionStorage`).
 
 ## Tracking
 
-`s`, `l`, `t`, `id`, `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`
-vengono letti dalla query string all'apertura e conservati in `sessionStorage`
-per tutta la permanenza sulla pagina.
+`s`, `l`, `t`, `id`, `ref`, `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`,
+`utm_content` vengono letti dalla query string all'apertura e conservati in
+`sessionStorage` per tutta la permanenza sulla pagina.
+
+### `ref` — codice venditore (CRM Sartori)
+
+I venditori condividono link `?ref=<codice>`. Lo script del CRM caricato
+nell'`<head>` di `index.html` legge quel codice, lo ricorda per 30 giorni in
+localStorage/cookie e lo inietta come `<input type="hidden" name="ref">` in ogni
+form della pagina.
+
+Nel payload `ref` viene preso, in quest'ordine: dall'URL, dall'input nascosto
+dell'embed, dalla memoria dell'embed (`window.CRMTrack.ref`). L'ultimo caso
+copre chi torna sulla pagina senza il parametro in URL.
+
+Lato n8n il nodo `Code1` usa `ref` **come fallback**, solo se mancano `s` / `l` /
+`id`: la provenienza diventa `[VENDITORE] Q4 2026 ROAS` e il codice finisce in
+`PROVENIENZA SPECIFICA`. Se `ref` non arriva, quei lead vengono registrati come
+`[PARAMETRO MANCANTE]`.
 
 ## Countdown
 
